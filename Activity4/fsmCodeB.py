@@ -12,22 +12,26 @@ class Timid(object):
     def __init__(self, robot = None):
         """Set up motors/robot and sensors here, set state to 'seeking' and forward
         speed to nonzero"""
-        <set up motors and sensors>
+        self.robot = robot
+        self.ultrasonic_sensor = ev3.UltrasonicSensor('in2')
         self.FSM = {'seeking': self.updateSeeking,
                     'found': self.updateFound}
         self.state = 'seeking'
-        <turn motors on>
+        self.robot.runforever(0.1)
+
 
     def updateSeeking(self):
-        if <object is close>:
-            <turn motors off>
+        distance = self.ultrasonic_sensor.distance_centimeters
+        if distance < 10:
+            self.robot.stop()
             return 'found'
         return None
 
 
     def updateFound(self):
-        if <object is not close>:
-            <turn motors on>
+        distance = self.ultrasonic_sensor.distance_centimeters
+        if distance > 10:
+            self.robot.runforever(0.1)
             return 'seeking'
         return None
 
@@ -38,6 +42,55 @@ class Timid(object):
         newState = updateFunc()
         if newState is not None:
             self.state = newState
+
+class Wary(object):
+    """If no object is close enough, the robot should move forward,
+    if an object is in the target range, then it should not move,
+    and if the object is too close, the robot should move backward."""
+    def __init__(self, robot = None):
+        """Set up motors/robot and sensors here, set state to 'seeking' and forward
+        speed to nonzero"""
+        self.flag = False
+        self.ultrasonic_sensor = ev3.UltrasonicSensor('in2')
+        self.robot = robot
+        self.FSM = {'seeking': self.updateSeeking,
+                    'found': self.updateFound}
+        self.state = 'seeking'
+        self.robot.runforever(0.1)
+
+    def updateSeeking(self):
+        distance = self.ultrasonic_sensor.distance_centimeters
+        if distance < 15 :
+            self.robot.stop()
+            return 'found'
+        elif distance > 15:
+            self.robot.runforever(0.1)
+            return 'seeking'
+        return None
+
+
+    def updateFound(self):
+        distance = self.ultrasonic_sensor.distance_centimeters
+        if distance < 10 :#<object is not close>:
+            self.robot.backwardforever(0.1)
+            return 'found'
+        elif distance > 15:
+            self.robot.runforever(0.1)
+            return 'seeking'
+        else:
+            self.robot.stop()
+            return 'found'
+
+        #return None
+
+
+    def run(self):
+        """Updates the FSM by reading sensor data, then choosing based on the state"""
+        updateFunc = self.FSM[self.state]
+        newState = updateFunc()
+        if newState is not None:
+            self.state = newState
+
 
 
 
@@ -54,6 +107,7 @@ def runBehavior(behavObj, runTime = None):
         # Could add time.sleep here if need to slow loop down
         elapsedTime = time.time() - startTime
     ev3.Sound.speak("Done")
+    behavObj.robot.stop()
 
 
 if __name__ == '__main__':
