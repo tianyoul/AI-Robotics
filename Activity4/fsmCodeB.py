@@ -71,7 +71,7 @@ class Wary(object):
 
     def updateFound(self):
         distance = self.ultrasonic_sensor.distance_centimeters
-        if distance < 10 :#<object is not close>:
+        if distance < 10 :
             self.robot.backwardforever(0.1)
             return 'found'
         elif distance > 15:

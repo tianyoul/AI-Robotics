@@ -52,7 +52,7 @@ class Wary(object):
             self.state = 'found'
         elif self.state == 'found' and (distance < 10):
             self.robot.backwardforever(0.1)
-            self.state = 'seeking'
+            self.state = 'found'
         elif self.state == 'found' and (distance > 15):
             self.robot.runforever(0.1)
             self.state = 'seeking'
