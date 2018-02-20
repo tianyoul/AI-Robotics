@@ -14,6 +14,7 @@ class exitCrowd(object):
         self.ultrasonic_sensor = ev3.UltrasonicSensor('in2')
         self.state = 'seeking' #seeking or exiting state
         self.robot = robot
+        self.robot.runforever(0.1)
 
     def run(self):
         """Updates the FSM by reading sensor data, then choosing based on the state"""
@@ -23,7 +24,7 @@ class exitCrowd(object):
             self.robot.turnLeftforever(0.3)
         elif self.state == 'exiting' and distance > 15:
             self.state = 'seeking'
-            self.robot.runforeer(0.1)
+            self.robot.runforever(0.1)
 
 
 def runBehavior(behavObj, runTime = None):
