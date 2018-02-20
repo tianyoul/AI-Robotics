@@ -68,12 +68,49 @@ class LineFollowing(object):
         """One cycle of feedback loop: read sensors, choose movement, set movement."""
         intensity = self.reflectance_sensor.reflected_light_intensity
 
-        self.robot.forward(0.2, 0.2)
+        self.robot.runforever(0.1)
 
         if intensity > 30:
             self.robot.turnLeft(0.1, 0.1)
         elif intensity < 20:
-            self.robot.turnRight(0.1, 0.1)
+            time.sleep(0.2)
+            self.robot.turnRight(0.2, 0.1)
+
+
+class Vehicle1(object):
+    def __init__(self, robot = None):
+        """Set up motors/robot and sensors here"""
+        self.flag = False
+        self.ultrasonic_sensor = ev3.UltrasonicSensor('in2')
+        self.robot = robot
+
+    def run(self):
+        """One cycle of feedback loop: read sensors, choose movement, set movement."""
+        dist = self.ultrasonic_sensor.distance_centimeters
+        if dist > 20:
+            self.robot.stop()
+        else:
+            self.robot.backwardforever(3/dist)
+
+class Vehicle2(object):
+    def __init__(self, robot = None):
+        """Set up motors/robot and sensors here"""
+        self.flag = False
+        self.ultrasonic_sensor = ev3.UltrasonicSensor('in2')
+        self.robot = robot
+
+    def run(self): # This is incomplete. The left speed is not always greater than right speed.
+        """One cycle of feedback loop: read sensors, choose movement, set movement."""
+        dist = self.ultrasonic_sensor.distance_centimeters
+        if dist > 50:
+            self.robot.stop()
+        elif dist > 30:
+            self.robot.forward(3/dist)
+        else:
+            self.robot.curve(5/dist, dist/51, 0.3)
+
+
+
 
 
 def runBehavior(behavObj, runTime = None):
