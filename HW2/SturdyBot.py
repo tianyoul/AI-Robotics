@@ -254,42 +254,24 @@ class SturdyBot(object):
         self.Sound.set_volume(50)
         self.Sound.play(name).wait()
 
-
-#Test the funtionalities
-
-# def test():
-#     ev3.Sound.beep()
-#     robot = SturdyRobot("test")
-#     robot.forward(0.5)
-#     time.sleep(0.5)
-#     robot.backward(0.5)
-#     time.sleep(0.5)
-#     robot.turnLeft(0.5)
-#     time.sleep(0.5)
-#     robot.turnRight(0.5)
-#     time.sleep(0.5)
-#     robot.curve(0.2, 0.7)
-#     time.sleep(0.5)
-#     robot.pointerLeft()
-#     time.sleep(0.5)
-#     robot.pointerRight()
-#     time.sleep(0.5)
-#     robot.zeroPointer()
-#     time.sleep(0.5)
-#     robot.pointerTo(90)
-#     time.sleep(0.5)
-#     robot.zeroPointer()
-#     time.sleep(0.5)
-#     robot.playMusic("LB.wav")
-#     time.sleep(0.5)
-#     robot.stop()
-#     ev3.Sound.beep()
-
-
-def test_sensors():
-    ev3.Sound.beep()
-    robot = SturdyRobot("test")
+if __name__ == "__main__":
+    firstConfig = {SturdyBot.LEFT_MOTOR: 'outc',
+                   SturdyBot.RIGHT_MOTOR: 'outb',
+                   SturdyBot.SERVO_MOTOR: 'outd',
+                   SturdyBot.LEFT_TOUCH: 'in4',
+                   SturdyBot.RIGHT_TOUCH: 'in1',
+                   SturdyBot.ULTRA_SENSOR: 'in2',
+                   SturdyBot.COLOR_SENSOR: 'in3',
+                   #SturdyBot.GYRO_SENSOR: ''
+                   }
+    touchyRobot = SturdyBot('Touchy', firstConfig)
     while not button.any():
-        result = robot.readTouch()
-        print(result)
-    ev3.Sound.beep()
+        touchValues = touchyRobot.readTouch()
+        if touchValues == (False, False):
+            touchyRobot.forward(0.6, 0.75)
+        elif touchValues[1]:
+            touchyRobot.turnLeft(0.4, 0.75)
+        elif touchValues[0]:
+            touchyRobot.turnRight(0.4, 0.75)
+        else:
+            touchyRobot.backward(0.6, 0.75)
