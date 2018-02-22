@@ -110,7 +110,7 @@ class SturdyBot(object):
         elif self.leftTouch is not None:
             return self.leftTouch.is_pressed, None
         elif self.rightTouch is not None:
-            return None, self.rightTouch
+            return None, self.rightTouch.is_pressed
         else:
             print("Warning, no touch sensor connected")
             return None, None
@@ -286,4 +286,10 @@ class SturdyBot(object):
 #     ev3.Sound.beep()
 
 
-
+def test_sensors():
+    ev3.Sound.beep()
+    robot = SturdyRobot("test")
+    while not button.any():
+        result = robot.readTouch()
+        print(result)
+    ev3.Sound.beep()
