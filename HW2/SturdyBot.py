@@ -33,6 +33,7 @@ class SturdyBot(object):
         self.ultraSensor = None
         self.colorSensor = None
         self.gyroSensor = None
+        self.Sound = ev3.Sound
         if configDict is not None:
             self.setupSensorsMotors(configDict)
         if self.leftMotor is None:
@@ -254,6 +255,49 @@ class SturdyBot(object):
         self.Sound.set_volume(50)
         self.Sound.play(name).wait()
 
+
+
+    def runforever(self, speed = 0.5):
+        self.leftMotor.speed_sp = self.leftMotor.max_speed * speed
+        self.rightMotor.speed_sp = self.rightMotor.max_speed * speed
+        self.leftMotor.run_forever()
+        self.rightMotor.run_forever()
+
+    def backwardforever(self, speed = 0.5):
+        self.leftMotor.speed_sp = -1 * self.leftMotor.max_speed * speed
+        self.rightMotor.speed_sp = -1* self.rightMotor.max_speed * speed
+        self.leftMotor.run_forever()
+        self.rightMotor.run_forever()
+
+    def turnLeftforever(self, speed = 0.5):
+        self.rightMotor.speed_sp = self.rightMotor.max_speed * speed
+        self.leftMotor.speed_sp = self.leftMotor.max_speed * -speed
+        self.leftMotor.run_forever()
+        self.rightMotor.run_forever()
+
+
+def testTouch(touchyRobot):
+    while not button.any():
+        touchValues = touchyRobot.readTouch()
+        if touchValues == (False, False):
+            touchyRobot.forward(0.6, 0.75)
+        elif touchValues[1]:
+            touchyRobot.turnLeft(0.4, 0.75)
+        elif touchValues[0]:
+            touchyRobot.turnRight(0.4, 0.75)
+        else:
+            touchyRobot.backward(0.6, 0.75)
+
+
+def testDistance(distRobot):
+    while not button.any():
+        distance = distRobot.readDistance()
+        if (distance < 15):
+            distRobot.stop()
+        else:
+            distRobot.runforever()
+
+
 if __name__ == "__main__":
     firstConfig = {SturdyBot.LEFT_MOTOR: 'outC',
                    SturdyBot.RIGHT_MOTOR: 'outB',
@@ -266,13 +310,7 @@ if __name__ == "__main__":
                    }
     touchyRobot = SturdyBot('Touchy', firstConfig)
     button = ev3.Button()
-    while not button.any():
-        touchValues = touchyRobot.readTouch()
-        if touchValues == (False, False):
-            touchyRobot.forward(0.6, 0.75)
-        elif touchValues[1]:
-            touchyRobot.turnLeft(0.4, 0.75)
-        elif touchValues[0]:
-            touchyRobot.turnRight(0.4, 0.75)
-        else:
-            touchyRobot.backward(0.6, 0.75)
+    testDistance(touchyRobot)
+
+
+
