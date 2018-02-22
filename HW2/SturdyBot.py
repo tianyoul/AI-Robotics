@@ -255,9 +255,9 @@ class SturdyBot(object):
         self.Sound.play(name).wait()
 
 if __name__ == "__main__":
-    firstConfig = {SturdyBot.LEFT_MOTOR: 'outc',
-                   SturdyBot.RIGHT_MOTOR: 'outb',
-                   SturdyBot.SERVO_MOTOR: 'outd',
+    firstConfig = {SturdyBot.LEFT_MOTOR: 'outC',
+                   SturdyBot.RIGHT_MOTOR: 'outB',
+                   SturdyBot.SERVO_MOTOR: 'outD',
                    SturdyBot.LEFT_TOUCH: 'in4',
                    SturdyBot.RIGHT_TOUCH: 'in1',
                    SturdyBot.ULTRA_SENSOR: 'in2',
@@ -265,6 +265,7 @@ if __name__ == "__main__":
                    #SturdyBot.GYRO_SENSOR: ''
                    }
     touchyRobot = SturdyBot('Touchy', firstConfig)
+    button = ev3.Button()
     while not button.any():
         touchValues = touchyRobot.readTouch()
         if touchValues == (False, False):
