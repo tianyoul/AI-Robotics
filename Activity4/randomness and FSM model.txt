@@ -1,0 +1,5 @@
+We can incorporate randomness into the FSM model by:
+- the robot can move forward or backward by random speed
+- the robot can turn right or left by some random angle
+
+In FSM model, the random movements can be a state where the angle and the speed is randomized.
