@@ -115,6 +115,38 @@ class SturdyBot(object):
             print("Warning, no touch sensor connected")
             return None, None
 
+    def readReflect(self):
+        """Reports the reflectance value for the color sensor"""
+        if self.colorSensor is not None:
+            return self.colorSensor.reflected_light_intensity
+        else:
+            print("Warning, no color sensor connected")
+            return None
+
+    def readColor(self):
+        """Reports the color value (0 through 7)"""
+        if self.colorSensor is not None:
+            return self.colorSensor.color
+        else:
+            print("Warning, no color sensor connected")
+            return None
+
+    def readDistance(self):
+        """Read and report the ultrasonic sensor's value, reporting in centimeters"""
+        if self.ultraSensor is not None:
+            return self.ultraSensor.distance_centimeters
+        else:
+            print("Warning, no ultra sensor connected")
+            return None
+
+    def readHeading(self):
+        """Read and report the gyro sensor's value, adjusting it to be between 0 and 360"""
+        if self.gyroSensor is not None:
+            return self.gyroSensor.angle % 360
+        else:
+            print("Warning, no gyro sensor connected")
+            return None
+
     # -----------------------------------------------------------------------------------
     # Methods of previous SturdyBot code, instance names modified
 
