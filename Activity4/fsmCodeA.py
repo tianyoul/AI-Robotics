@@ -82,6 +82,26 @@ class exitCrowd(object):
             self.robot.runforever(0.1)
 
 
+class lineFollowing(object):
+    """This behavior should let the robot follow a line."""
+    def __init__(self, robot = None):
+        self.reflectance_sensor = ev3.ColorSensor('in3')
+        self.state = 'online' #seeking or exiting state
+        self.robot = robot
+        self.robot.runforever(0.1)
+
+    def run(self):
+        intensity = self.reflectance_sensor.reflected_light_intensity
+        if self.state == 'online' and intensity < 20:
+            self.state = 'offline'
+            self.robot.turnRight(0.2, 0.1)
+        elif self.state == 'offline' and intensity > 30:
+            self.state = 'online'
+            self.robot.turnLeft(0.1, 0.1)
+        else:
+            self.robot.runforever(0.1)
+
+
 
 def runBehavior(behavObj, runTime = None):
     """Takes in a behavior object and an optional time to run. It runs
