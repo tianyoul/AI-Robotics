@@ -11,8 +11,7 @@ class Honeybee(object):
         color = self.robot.readColor()
 
         if color == 5:
-            starSong = [('C4', 'q'), ('C4', 'q'), ('G4', 'q'), ('G4', 'q'), ('A4', 'q'), ('A4', 'q'), ('G4', 'h'),
-                        ('F4', 'q'), ('F4', 'q'), ('E4', 'q'), ('E4', 'q'), ('D4', 'q'), ('D4', 'q'), ('C4', 'h')]
+            starSong = [('C4', 'q')]
             ev3.Sound.play_song(starSong).wait()
             self.robot.stop()
             return False
@@ -28,17 +27,18 @@ class Honeybee(object):
             elif touch[1]:
                 self.robot.backward(0.1, 0.5)
                 self.robot.turnLeft(0.1, 0.3)
-            elif distance < 10:
-                self.robot.backward(0.1, 0.3)
-                self.robot.turnLeft(0.1, 0.3)
-            elif distance > 35:
-                self.robot.forward(0.1, 0.3)
-                self.robot.turnRight(0.1, 0.3)
-            elif distance > 15:
-                self.robot.forward(0.1, 0.3)
             else:
-                self.robot.turnLeft(0.1, 0.3)
-
+                print(distance)
+                if distance < 10:
+                    self.robot.backward(0.1, 0.3)
+                    self.robot.turnLeft(0.1, 0.3)
+                elif distance > 50:
+                    self.robot.forward(0.1, 0.6)
+                    self.robot.turnRight(0.1, 0.3)
+                # elif distance > 15:
+                #     self.robot.forward(0.1, 0.3)
+                else:
+                    self.robot.forward(0.1, 0.3)
             return True
 
 
