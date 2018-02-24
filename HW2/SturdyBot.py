@@ -289,6 +289,8 @@ def testTouch(touchyRobot):
             touchyRobot.backward(0.6, 0.75)
 
 
+# Test the sensor functions
+
 def testDistance(distRobot):
     while not button.any():
         distance = distRobot.readDistance()
@@ -296,21 +298,39 @@ def testDistance(distRobot):
             distRobot.stop()
         else:
             distRobot.runforever()
+    distRobot.stop()
 
+def testReflect(robot):
+    while not button.any():
+        intensity = robot.readReflect()
+        print(intensity)
+
+
+#dict = {0:"no", 1:"black", 2:"blue", 3:"green", 4:"yellow", 5:"red", 6:"white", 7:"brown"}
+def testColor(robot):
+    while not button.any():
+        color = robot.readColor()
+        print(color)
+
+# Counter Clockwise 0 - 360
+def testGyro(robot):
+    while not button.any():
+        heading = robot.readHeading()
+        print(heading)
 
 if __name__ == "__main__":
     firstConfig = {SturdyBot.LEFT_MOTOR: 'outC',
                    SturdyBot.RIGHT_MOTOR: 'outB',
                    SturdyBot.SERVO_MOTOR: 'outD',
                    SturdyBot.LEFT_TOUCH: 'in4',
-                   SturdyBot.RIGHT_TOUCH: 'in1',
+                   #SturdyBot.RIGHT_TOUCH: 'in1',
                    SturdyBot.ULTRA_SENSOR: 'in2',
-                   SturdyBot.COLOR_SENSOR: 'in3',
-                   #SturdyBot.GYRO_SENSOR: ''
+                   SturdyBot.COLOR_SENSOR: 'in1',
+                   SturdyBot.GYRO_SENSOR: 'in3'
                    }
-    touchyRobot = SturdyBot('Touchy', firstConfig)
+    robot = SturdyBot('test', firstConfig)
     button = ev3.Button()
-    testDistance(touchyRobot)
+    testDistance(robot)
 
 
 
