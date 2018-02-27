@@ -136,35 +136,6 @@ class SturdyRobot(object):
         self.right_motor.run_forever()
 
 
-#Test the funtionalities
-
-def test():
-    ev3.Sound.beep()
-    robot = SturdyRobot("test")
-    robot.forward(0.5)
-    time.sleep(0.5)
-    robot.backward(0.5)
-    time.sleep(0.5)
-    robot.turnLeft(0.5)
-    time.sleep(0.5)
-    robot.turnRight(0.5)
-    time.sleep(0.5)
-    robot.curve(0.2, 0.7)
-    time.sleep(0.5)
-    robot.pointerLeft()
-    time.sleep(0.5)
-    robot.pointerRight()
-    time.sleep(0.5)
-    robot.zeroPointer()
-    time.sleep(0.5)
-    robot.pointerTo(90)
-    time.sleep(0.5)
-    robot.zeroPointer()
-    time.sleep(0.5)
-    robot.playMusic("LB.wav")
-    time.sleep(0.5)
-    robot.stop()
-    ev3.Sound.beep()
 
 
 

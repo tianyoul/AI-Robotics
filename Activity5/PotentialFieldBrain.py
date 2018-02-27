@@ -1,6 +1,6 @@
 # A Potential Field control system
 
-import SturdyBot
+from NewSturdyBot import SturdyBot
 import math
 
 #-------------------------------------------
@@ -83,7 +83,7 @@ class PotentialFieldBrain:
             magnitude = self.maxMagnitude
         return magnitude / self.maxMagnitude
  
-    def _scaledRotation(self, rotSpeed):
+    def _scaleRotation(self, rotSpeed):
         """Takes in a rotation speed and scales it so that
         it is further from  zero than 0.2."""
         if rotSpeed > 0:
@@ -92,6 +92,8 @@ class PotentialFieldBrain:
         elif rotSpeed < 0:
           # if scaled speed is too low, set to 0.2
             rotSpeed = min(-0.2, rotSpeed)
+
+        return rotSpeed
     
     
     def _updateBehaviors(self):
