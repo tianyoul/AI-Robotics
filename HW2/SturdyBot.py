@@ -124,6 +124,14 @@ class SturdyBot(object):
             print("Warning, no color sensor connected")
             return None
 
+    def readLight(self):
+        """Reports the amount of light in its surroundings,  (0-100, dark to light)"""
+        if self.colorSensor is not None:
+            return self.colorSensor.ambient_light_intensity
+        else:
+            print("Warning, no color sensor connected")
+            return None
+
     def readColor(self):
         """Reports the color value (0 through 7)"""
         if self.colorSensor is not None:
