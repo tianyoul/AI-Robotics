@@ -110,9 +110,6 @@ class Vehicle2(object):
             self.robot.curve(5/dist, dist/51, 0.3)
 
 
-
-
-
 def runBehavior(behavObj, runTime = None):
     """Takes in a behavior object and an optional time to run. It runs
     a loop that calls the run method of the behavObj over and over until
@@ -129,10 +126,8 @@ def runBehavior(behavObj, runTime = None):
     ev3.Sound.speak("Done")
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # set up robot object here if using it
-    timBehav = Timid()  # pass robot object here if need be
+    # timBehav = Timid()
+    # runBehavior(timBehav)
 
-    runBehavior(timBehav)
-
-    # add code to stop robot motors
