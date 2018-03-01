@@ -8,36 +8,33 @@ from random import *
 
 
 
-def keepMoving():
-    """This is a very simple behavior that reports a fixed magnitude and a
-    heading that matches the robot's current heading"""
+# def keepMoving():
+#     """This is a very simple behavior that reports a fixed magnitude and a
+#     heading that matches the robot's current heading"""
+#
+#     return (30.0, 0.0)
+#
+#
+# def wander():
+#     """Generate random directions"""
+#
+#     angle = randint(-90, 90)
+#
+#     i = randint(0,5)
+#
+#     if i == 4:
+#         return (30.0, angle)
+#
+#     return (30.0, 0)
 
-    return (30.0, 0.0)
-
-
-def wander():
-    """Generate random directions"""
-
-    angle = randint(-90, 90)
-
-    i = randint(0,5)
-
-    if i == 4:
-        return (30.0, angle)
-
-    return (30.0, 0)
-
-def obstacle():
-    """obstacle behavior"""
-
-    angle = randint(-90, 90)
-
-    i = randint(0,5)
-
-    if i == 4:
-        return (30.0, angle)
-
-    return (30.0, 0)
+# def obstacleForce():
+#     """obstacle behavior"""
+#     distance =
+#
+#     if distance < 50:
+#         return (- 30/distance/distance, 0)
+#
+#     return (0, 0)
 
 
 # -----------------------------------------------------
@@ -52,14 +49,15 @@ def runDemo(runTime = 30):
                    SturdyBot.RIGHT_MOTOR: 'outB',
                    SturdyBot.SERVO_MOTOR: 'outD',
                    SturdyBot.LEFT_TOUCH: 'in4',
-                   SturdyBot.RIGHT_TOUCH: 'in3',
-                   SturdyBot.ULTRA_SENSOR: 'in2',
-                   SturdyBot.COLOR_SENSOR: 'in1',
+                   SturdyBot.RIGHT_TOUCH: 'in1',
+                   SturdyBot.ULTRA_SENSOR: 'in3',
+                   SturdyBot.COLOR_SENSOR: 'in2',
                    # SturdyBot.GYRO_SENSOR: 'in3'
                    }
     robot = SturdyBot("beibei",config)
     brain = PotentialFieldBrain.PotentialFieldBrain(robot)
-    brain.add(keepMoving,wander)
+    brain.add('keepMoving')
+    brain.add('wander')
 
     startTime = time.time()
     elapsedTime = time.time() - startTime
@@ -71,6 +69,7 @@ def runDemo(runTime = 30):
         brain.step()
         elapsedTime = time.time() - startTime
     brain.stopAll()
+    robot.stop()
 
 
 runDemo(10)
