@@ -6,37 +6,6 @@ import ev3dev.ev3 as ev3
 from random import *
 
 
-
-
-# def keepMoving():
-#     """This is a very simple behavior that reports a fixed magnitude and a
-#     heading that matches the robot's current heading"""
-#
-#     return (30.0, 0.0)
-#
-#
-# def wander():
-#     """Generate random directions"""
-#
-#     angle = randint(-90, 90)
-#
-#     i = randint(0,5)
-#
-#     if i == 4:
-#         return (30.0, angle)
-#
-#     return (30.0, 0)
-
-# def obstacleForce():
-#     """obstacle behavior"""
-#     distance =
-#
-#     if distance < 50:
-#         return (- 30/distance/distance, 0)
-#
-#     return (0, 0)
-
-
 # -----------------------------------------------------
 # Run the demo using something like this:
 
@@ -58,6 +27,9 @@ def runDemo(runTime = 30):
     brain = PotentialFieldBrain.PotentialFieldBrain(robot)
     brain.add('keepMoving')
     brain.add('wander')
+    brain.add('obstacleForce')
+    brain.add('obstacleForce')
+    brain.add('obstacleForce')
     brain.add('obstacleForce')
 
     startTime = time.time()

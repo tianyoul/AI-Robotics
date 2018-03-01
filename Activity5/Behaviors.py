@@ -26,6 +26,15 @@ class wander(behaviorBase):
         if i == 4:
             self.angle = randint(-60, 60)
 
+class obstacleForce(behaviorBase):
+    def update(self):
+        self.robot.pointTo(-90) # Pointing the ultrasonic sensor to the left and read distance input
+        distance = self.robot.readDistance()
+        self.magnitude = -100/distance/distance
+        #TODO
+        #self.angle  = ???   might need gyro sensor
+        # turn 90
+
 class obstacleForceLeft(behaviorBase):
     def update(self):
         self.robot.pointTo(-90) # Pointing the ultrasonic sensor to the left and read distance input

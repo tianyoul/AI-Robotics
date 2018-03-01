@@ -269,12 +269,12 @@ class SturdyBot(object):
         """Turn the flag to the given direction."""
         angle = angle - self.flagDir
         self.flagDir = angle
-        self.medium_motor.speed_sp = 180
-        self.medium_motor.stop_action = 'hold'
-        self.medium_motor.position_sp = angle
-        self.medium_motor.run_to_rel_pos()
-        self.medium_motor.wait_until_not_moving()
-        self.medium_motor.stop()
+        self.servoMotor.speed_sp = 180
+        self.servoMotor.stop_action = 'hold'
+        self.servoMotor.position_sp = angle
+        self.servoMotor.run_to_rel_pos()
+        self.servoMotor.wait_until_not_moving()
+        self.servoMotor.stop()
 
 
     def _moveRobot(self, runTime):

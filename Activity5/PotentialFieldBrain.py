@@ -35,7 +35,6 @@ class PotentialFieldBrain:
     def add(self, behavior):
         """Takes a behavior object as input, and initializes it, and
         adds it to the list"""
-        #self.behaviors.append(behavior) #TODO
         beh = getattr(Behaviors, behavior)
         self.behaviors.append(beh(self.robot))
 
