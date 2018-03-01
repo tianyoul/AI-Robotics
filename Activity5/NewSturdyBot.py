@@ -33,6 +33,7 @@ class SturdyBot(object):
         self.ultraSensor = None
         self.colorSensor = None
         self.gyroSensor = None
+        self.flagDir = 0
         if configDict is not None:
             self.setupSensorsMotors(configDict)
         if self.leftMotor is None:
@@ -275,7 +276,6 @@ class SturdyBot(object):
         self.servoMotor.run_to_rel_pos()
         self.servoMotor.wait_until_not_moving()
         self.servoMotor.stop()
-
 
     def _moveRobot(self, runTime):
         """Helper method, takes in a time in seconds, or time is None if no time limit, 

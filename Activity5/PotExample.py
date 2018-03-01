@@ -3,6 +3,7 @@ from NewSturdyBot import SturdyBot
 import PotentialFieldBrain
 import time
 import ev3dev.ev3 as ev3
+import Behaviors
 from random import *
 
 
@@ -25,12 +26,17 @@ def runDemo(runTime = 30):
                    }
     robot = SturdyBot("beibei",config)
     brain = PotentialFieldBrain.PotentialFieldBrain(robot)
-    brain.add('keepMoving')
-    brain.add('wander')
-    brain.add('obstacleForce')
-    brain.add('obstacleForce')
-    brain.add('obstacleForce')
-    brain.add('obstacleForce')
+    keepMoving = Behaviors.keepMoving(robot)
+    wander = Behaviors.wander(robot)
+    obstacleForceLeft = Behaviors.obstacleForce(robot, -90)
+    obstacleForceFront = Behaviors.obstacleForce(robot, 0)
+    obstacleForceRight = Behaviors.obstacleForce(robot, 90)
+
+    brain.add(keepMoving)
+    brain.add(wander)
+    brain.add(obstacleForceLeft)
+    brain.add(obstacleForceFront)
+    brain.add(obstacleForceRight)
 
     startTime = time.time()
     elapsedTime = time.time() - startTime

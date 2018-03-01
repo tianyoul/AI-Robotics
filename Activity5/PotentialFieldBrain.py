@@ -25,8 +25,6 @@ class PotentialFieldBrain:
         an optional input to define the maximum magnitude of any vector."""
 
         self.robot = robot
-        # self.keepMoving = keepMoving() #TODO
-        # self.wander = wander()
         # set maximum possible magnitude
         self.maxMagnitude = maxMagnitude
         self.behaviors = []
@@ -35,8 +33,10 @@ class PotentialFieldBrain:
     def add(self, behavior):
         """Takes a behavior object as input, and initializes it, and
         adds it to the list"""
-        beh = getattr(Behaviors, behavior)
-        self.behaviors.append(beh(self.robot))
+        # beh = getattr(Behaviors, behavior)
+        # input = self.robot
+        # self.behaviors.append(beh(self.robot))
+        self.behaviors.append(behavior)
 
 
 
@@ -108,7 +108,7 @@ class PotentialFieldBrain:
         tuple containing magnitude and direction"""
         vectors = []
         for behav in self.behaviors:
-            behav.update()   #TODO
+            behav.update()
             vec = behav.getVec()
             vectors.append(vec)
         return vectors

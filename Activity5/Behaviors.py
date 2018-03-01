@@ -27,44 +27,24 @@ class wander(behaviorBase):
             self.angle = randint(-60, 60)
 
 class obstacleForce(behaviorBase):
-    def update(self):
-        self.robot.pointTo(-90) # Pointing the ultrasonic sensor to the left and read distance input
-        distance = self.robot.readDistance()
-        self.magnitude = -100/distance/distance
-        #TODO
-        #self.angle  = ???   might need gyro sensor
-        # turn 90
+    def __init__(self, robot, angel):
+        super().__init__(robot)
+        self.flagAngel = angel
 
-class obstacleForceLeft(behaviorBase):
     def update(self):
-        self.robot.pointTo(-90) # Pointing the ultrasonic sensor to the left and read distance input
+        self.robot.pointTo(self.flagAngel) # Pointing the ultrasonic sensor to its intended direction
         distance = self.robot.readDistance()
-        if distance < 10:
+        if distance > 100: # if the distance is too big / there are no obstacles, then we don't need to change its direction or magnitude
+            self.angel = 0.0
             self.magnitude = 0.0
-            self.angle = 0.0
-        else:
-            self.magnitude = 30.0 #TODO: modify the calculation of the corresponding magnitude
-            self.angle = 0.0
-        self.robot.pointTo(0)  # Return to the front
+        else: # the closer we are to the obstacle, the greater the magnitude should be, with the angle pointing to another direction
+            self.magnitude = -100/distance/distance
+            self.angel = -self.flagAngel
 
-class obstacleForceFront(behaviorBase):
-    def update(self):
-        distance = self.robot.readDistance()
-        if distance < 10:
-            self.magnitude = 0.0
-            self.angle = 0.0
-        else:
-            self.magnitude = 30.0 #TODO: modify the calculation of the corresponding magnitude
-            self.angle = 0.0
-
-class obstacleForceRight(behaviorBase):
-    def update(self):
-        self.robot.pointTo(90) # Pointing the ultrasonic sensor to the right and read distance input
-        distance = self.robot.readDistance()
-        if distance < 10:
-            self.magnitude = 0.0
-            self.angle = 0.0
-        else:
-            self.magnitude = 30.0 #TODO: modify the calculation of the corresponding magnitude
-            self.angle = 0.0
-        self.robot.pointTo(0)  # Return to the front
+# class clearStall(behaviorBase):
+#     def update(self):
+#         if self.robot.leftMotor.is_stalled and self.robot.rightMotor.is_stalled:
+#             # according to the documentation, is_stalled means the motor is not turning when it should be
+#             self.magnitude = -30.0
+#             self.angle = 0.0 # run backwards when both motors are stalled
+#
