@@ -2,6 +2,7 @@
 
 from NewSturdyBot import SturdyBot
 import math
+from random import *
 
 #-------------------------------------------
 # 
@@ -23,6 +24,8 @@ class PotentialFieldBrain:
         an optional input to define the maximum magnitude of any vector."""
 
         self.robot = robot
+        self.keepMoving = keepMoving() #TODO
+        self.wander = wander()
         # set maximum possible magnitude
         self.maxMagnitude = maxMagnitude
         self.behaviors = []
@@ -31,7 +34,11 @@ class PotentialFieldBrain:
     def add(self, behavior):
         """Takes a behavior object as input, and initializes it, and
         adds it to the list"""
-        self.behaviors.append( behavior )
+        #self.behaviors.append(behavior) #TODO
+        if behavior == "keepMoving":
+            self.behaviors.append(self.keepMoving)
+        if behavior == "wander":
+            self.behaviors.append(self.wander)
 
 
     def run(self, numSteps):
@@ -102,7 +109,7 @@ class PotentialFieldBrain:
         tuple containing magnitude and direction"""
         vectors = []
         for behav in self.behaviors:
-            vec = behav()
+            vec = (behav.magnitude, behav.angle)   #TODO
             vectors.append(vec)
         return vectors
 
@@ -131,4 +138,19 @@ class PotentialFieldBrain:
         return (totalMag, degAngle)
 
 
+#TODO
 
+class keepMoving():
+    def __init__(self):
+        self.magnitude = 30.0
+        self.angle = 0.0
+
+class wander():
+    def __init__(self):
+        angle = randint(-90, 90)
+        i = randint(0, 5)
+        self.magnitude = 30.0
+        if i == 4:
+            self.angle = angle
+        else:
+            self.angle = 0
