@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
+
 from SturdyBot import SturdyBot
 import reactiveCode as reactiveCode
+
 
 firstConfig = {SturdyBot.LEFT_MOTOR: 'outC',
                SturdyBot.RIGHT_MOTOR: 'outB',

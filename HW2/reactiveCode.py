@@ -1,5 +1,6 @@
 import time
 import ev3dev.ev3 as ev3
+import random
 
 class escapeBox(object):
 
@@ -7,40 +8,40 @@ class escapeBox(object):
         self.robot = robot
         self.prev_light = 0 # assume the darkest surrounding
 
+
     def run(self):
         # Getting the reflectance from the color sensor
+        self.robot.forward(0.2, 0.3)
+        while self.robot.readLight() == 0:
+            self.robot.turnLeft(0.1, 0.2)
         light = self.robot.readLight()
-        if light >= 70:
+        if light >= 5:
             starSong = [('C4', 'q')]
             ev3.Sound.play_song(starSong).wait()
             self.robot.stop()
             return False
+        elif self.robot.readDistance() < 15:
+            self.robot.backward(0.3, 0.5)
+            i = random.randint(0, 1)
+            time = random.randint(0, 100)
+            if i == 1:
+                self.robot.turnLeft(0.3, time / 200)
+            else:
+                self.robot.turnRight(0.3, time / 200)
+            return True
         else:
-            distance = self.robot.readDistance()
             touch = self.robot.readTouch()
             # the robot should both avoid obstacles and seek out light
             if touch[0] and touch[1]:
                 # first, we should consider when the bumpers are hit
-                self.robot.backward(0.1,0.5)
+                self.robot.backward(0.3,0.5)
             elif touch[0]:
-                self.robot.backward(0.1, 0.7)
-                self.robot.turnRight(0.1, 0.3)
+                self.robot.backward(0.3, 0.5)
+                self.robot.turnRight(0.2, 0.3)
             elif touch[1]:
-                self.robot.backward(0.1, 0.5)
-                self.robot.turnLeft(0.1, 0.3)
+                self.robot.backward(0.3, 0.5)
+                self.robot.turnLeft(0.2, 0.3)
             # when the bumpers are alright, we need to make sure it's not too close to any obstacles
-            else:
-                print(distance)
-                if distance < 10:
-                    self.robot.backward(0.1, 0.3)
-                    self.robot.turnLeft(0.1, 0.3)
-                elif distance > 50:
-                    self.robot.forward(0.1, 0.6)
-                    self.robot.turnRight(0.1, 0.3)
-                else:
-                    # when it's not close to any obstacles, we should ask it to track the light
-                    # TODO: implement this part, replace what I have here; compare light difference
-                    self.robot.forward(0.1,0.3)
 
             return True
 
@@ -65,25 +66,25 @@ class Honeybee(object):
             touch = self.robot.readTouch()
 
             if touch[0] and touch[1]:
-                self.robot.backward(0.1, 0.5)
+                self.robot.backward(0.1, 1)
             elif touch[0]:
-                self.robot.backward(0.1, 0.7)
+                self.robot.backward(0.1, 1)
                 self.robot.turnRight(0.1, 0.3)
             elif touch[1]:
-                self.robot.backward(0.1, 0.5)
+                self.robot.backward(0.1, 1)
                 self.robot.turnLeft(0.1, 0.3)
             else:
-                print(distance)
                 if distance < 10:
-                    self.robot.backward(0.1, 0.3)
-                    self.robot.turnLeft(0.1, 0.3)
-                elif distance > 50:
-                    self.robot.forward(0.1, 0.6)
-                    self.robot.turnRight(0.1, 0.3)
-                # elif distance > 15:
-                #     self.robot.forward(0.1, 0.3)
+                    self.robot.backward(0.1, 1)
+                    i = random.randint(0, 1)
+                    time = random.randint(0,100)
+                    if i == 1:
+                        self.robot.turnLeft(0.3, time / 200)
+                    else:
+                        self.robot.turnRight(0.3, time / 200)
                 else:
-                    self.robot.forward(0.1, 0.3)
+                    self.robot.forward(0.2, 0.5)
+
             return True
 
 

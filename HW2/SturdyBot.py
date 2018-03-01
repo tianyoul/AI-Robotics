@@ -326,6 +326,11 @@ def testGyro(robot):
         heading = robot.readHeading()
         print(heading)
 
+def testLight(robot):
+    while not button.any():
+        light = robot.readLight()
+        print(light)
+
 if __name__ == "__main__":
     firstConfig = {SturdyBot.LEFT_MOTOR: 'outC',
                    SturdyBot.RIGHT_MOTOR: 'outB',
@@ -338,7 +343,7 @@ if __name__ == "__main__":
                    }
     robot = SturdyBot('test', firstConfig)
     button = ev3.Button()
-    testDistance(robot)
+    testLight(robot)
 
 
 
