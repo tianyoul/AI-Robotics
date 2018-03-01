@@ -58,6 +58,7 @@ def runDemo(runTime = 30):
     brain = PotentialFieldBrain.PotentialFieldBrain(robot)
     brain.add('keepMoving')
     brain.add('wander')
+    brain.add('obstacleForce')
 
     startTime = time.time()
     elapsedTime = time.time() - startTime

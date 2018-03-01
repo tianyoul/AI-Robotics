@@ -37,7 +37,7 @@ class PotentialFieldBrain:
         adds it to the list"""
         #self.behaviors.append(behavior) #TODO
         beh = getattr(Behaviors, behavior)
-        self.behaviors.append(beh())
+        self.behaviors.append(beh(self.robot))
 
 
 

@@ -119,7 +119,45 @@ class SturdyBot(object):
             print("Warning, no touch sensor connected")
             return None, None
 
-    # Add the rest here
+    def readReflect(self):
+        """Reports the reflectance value for the color sensor"""
+        if self.colorSensor is not None:
+            return self.colorSensor.reflected_light_intensity
+        else:
+            print("Warning, no color sensor connected")
+            return None
+
+    def readLight(self):
+        """Reports the amount of light in its surroundings,  (0-100, dark to light)"""
+        if self.colorSensor is not None:
+            return self.colorSensor.ambient_light_intensity
+        else:
+            print("Warning, no color sensor connected")
+            return None
+
+    def readColor(self):
+        """Reports the color value (0 through 7)"""
+        if self.colorSensor is not None:
+            return self.colorSensor.color
+        else:
+            print("Warning, no color sensor connected")
+            return None
+
+    def readDistance(self):
+        """Read and report the ultrasonic sensor's value, reporting in centimeters"""
+        if self.ultraSensor is not None:
+            return self.ultraSensor.distance_centimeters
+        else:
+            print("Warning, no ultra sensor connected")
+            return None
+
+    def readHeading(self):
+        """Read and report the gyro sensor's value, adjusting it to be between 0 and 360"""
+        if self.gyroSensor is not None:
+            return self.gyroSensor.angle % 360
+        else:
+            print("Warning, no gyro sensor connected")
+            return None
 
 
     # ---------------------------------------------------------------------------
@@ -226,7 +264,19 @@ class SturdyBot(object):
         self.rightMotor.speed_sp = rightSpeed
         self._moveRobot(runTime)
         
-        
+
+    def pointerTo(self, angle):
+        """Turn the flag to the given direction."""
+        angle = angle - self.flagDir
+        self.flagDir = angle
+        self.medium_motor.speed_sp = 180
+        self.medium_motor.stop_action = 'hold'
+        self.medium_motor.position_sp = angle
+        self.medium_motor.run_to_rel_pos()
+        self.medium_motor.wait_until_not_moving()
+        self.medium_motor.stop()
+
+
     def _moveRobot(self, runTime):
         """Helper method, takes in a time in seconds, or time is None if no time limit, 
         and it runs the motors at the current speed either forever or for the given time.
