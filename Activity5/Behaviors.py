@@ -62,4 +62,27 @@ class clearStall(behaviorBase):
             self.magnitude = 0.0
             self.angle = 0.0
 
-class
+class senseTouch(behaviorBase):
+    def update(self):
+        (left, right) = self.robot.readTouch()
+        if left == 0 and right == 0:
+            self.magnitude = 0.0
+            self.angle = 0.0
+        elif left == 1 and right == 1:
+            self.magnitude = 15.0
+            self.angle = 180.0
+        elif left == 1:
+            self.magnitude = 10.0
+            self.angle = 135.0
+        else:
+            self.magnitude = 10.0
+            self.angle = -135.0
+
+
+class senseLight(behaviorBase):
+
+    #TODO: need to complete this class
+    def update(self):
+        self.magnitude = 0.0
+        self.angle = 0.0
+
