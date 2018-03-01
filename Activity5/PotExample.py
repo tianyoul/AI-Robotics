@@ -31,12 +31,16 @@ def runDemo(runTime = 30):
     obstacleForceLeft = Behaviors.obstacleForce(robot, -90)
     obstacleForceFront = Behaviors.obstacleForce(robot, 0)
     obstacleForceRight = Behaviors.obstacleForce(robot, 90)
+    clearStallLeft = Behaviors.clearStall(robot, robot.left_motor, 'left')
+    clearStallRight = Behaviors.clearStall(robot, robot.right_motor, 'right')
 
     brain.add(keepMoving)
     brain.add(wander)
     brain.add(obstacleForceLeft)
     brain.add(obstacleForceFront)
     brain.add(obstacleForceRight)
+    brain.add(clearStallLeft)
+    brain.add(clearStallRight)
 
     startTime = time.time()
     elapsedTime = time.time() - startTime
