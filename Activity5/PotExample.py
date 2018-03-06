@@ -13,7 +13,7 @@ from random import *
 def runDemo(runTime = 30):
     """This function is really a model to be modified.  It shows how to take a make
     a PotentialFieldBrain, add behaviors to the brain, and then run it for the given time."""
-    # add behaviors, in order from lowest to hightest
+    # add behaviors, in order from lowest to hightest.
 
     config = {SturdyBot.LEFT_MOTOR: 'outC',
                    SturdyBot.RIGHT_MOTOR: 'outB',
