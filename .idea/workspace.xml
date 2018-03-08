@@ -2,8 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00759fea-ef39-4074-90ab-37bd7f553605" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity6_OpenCV/capture.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Blowhole013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Blowhole021.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Coins1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Coins2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/DollarCoin.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Letters/letterP.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Letters/letters1.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Letters/letters2.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Letters/lettersWH.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Letters/number5.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Pioneer0005.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Pioneer0012.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Pioneer0029.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Pioneer0063.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Pioneer0067.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Pioneer0093.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Puzzle1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/Puzzle2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/SnowLeo1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/SnowLeo2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/SnowLeo3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/SnowLeo4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/beachBahamas.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/chicago.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/fallWoods.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/frame0017.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/frame0019.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/frankenstein.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/garden.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/ghostrider.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/gorge.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/grandtetons.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/redDoor.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/sampleRed.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/shops.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/swans.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/twopeople.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/TestImages/waterfall.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity7_BasicManipulations/NumpyBasics.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Activity6_OpenCV/camera.py" afterPath="$PROJECT_DIR$/Activity6_OpenCV/camera.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,18 +58,30 @@
         <entry file="file://$PROJECT_DIR$/Activity6_OpenCV/milestones.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="camera.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="camera.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Activity6_OpenCV/camera.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NumpyBasics.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/NumpyBasics.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/Activity6_OpenCV/draw.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -104,6 +155,7 @@
         <option value="$PROJECT_DIR$/Activity5/PotExample.py" />
         <option value="$PROJECT_DIR$/Activity6_OpenCV/milestones.py" />
         <option value="$PROJECT_DIR$/Activity6_OpenCV/camera.py" />
+        <option value="$PROJECT_DIR$/activity7_BasicManipulations/NumpyBasics.py" />
       </list>
     </option>
   </component>
@@ -158,7 +210,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Activity6_OpenCV" />
+              <option name="myItemId" value="Activity7_BasicManipulations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -172,10 +224,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/HW2" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/activity7_BasicManipulations" />
       <recent name="$PROJECT_DIR$/HW2" />
     </key>
   </component>
@@ -372,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520545880542</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="finished milestone 4">
+      <created>1520546292782</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1520546292782</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -426,7 +486,9 @@
     <MESSAGE value="Added stall sensor behavior." />
     <MESSAGE value="camera" />
     <MESSAGE value="camera turns off when q is types" />
-    <option name="LAST_COMMIT_MESSAGE" value="camera turns off when q is types" />
+    <MESSAGE value="finished milestone 4" />
+    <MESSAGE value="created activity 7 directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="created activity 7 directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -435,7 +497,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/waveFlag.py" />
     <entry file="file://$PROJECT_DIR$/largeMotor.py" />
     <entry file="file://$PROJECT_DIR$/goat.py" />
     <entry file="file://$PROJECT_DIR$/moveTurn.py" />
@@ -664,7 +725,7 @@
     <entry file="file://$PROJECT_DIR$/Activity6_OpenCV/milestones.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -677,7 +738,7 @@
     <entry file="file://$PROJECT_DIR$/Activity6_OpenCV/draw.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -692,8 +753,18 @@
     <entry file="file://$PROJECT_DIR$/Activity6_OpenCV/camera.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/NumpyBasics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
