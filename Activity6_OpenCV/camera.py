@@ -8,7 +8,10 @@ while True:
     char = chr(x & 0xFF)
     if char == 'q':
         break
-
+    if char == 's':
+        cap = cv2.VideoCapture(0)
+        ret, image = cap.read()
+        cv2.imwrite("capture.jpg", image)
 
 cv2.destroyAllWindows()
 vidCap.release()
