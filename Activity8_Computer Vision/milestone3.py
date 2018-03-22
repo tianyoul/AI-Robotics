@@ -15,6 +15,7 @@ for i in circles1[0,:]:
 
 cv2.imshow("Coins1", coins1Img)
 cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 coins2Img = cv2.imread("TestImages/Coins2.jpg")
 grayImg2 = cv2.cvtColor(coins2Img, cv2.COLOR_BGR2GRAY)
@@ -29,3 +30,4 @@ for i in circles2[0,:]:
 
 cv2.imshow("Coins2", coins2Img)
 cv2.waitKey(0)
+cv2.destroyAllWindows()
