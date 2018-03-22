@@ -2,7 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00759fea-ef39-4074-90ab-37bd7f553605" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HW3/identifyingWords.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Blowhole013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Blowhole021.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Coins1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Coins2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/DollarCoin.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/letterP.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/letters1.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/letters2.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/lettersWH.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/number5.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0005.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0012.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0029.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0063.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0067.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0093.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Puzzle1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Puzzle2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/SnowLeo1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/SnowLeo2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/SnowLeo3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/SnowLeo4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/beachBahamas.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/chicago.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/fallWoods.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/frame0017.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/frame0019.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/frankenstein.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/garden.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/ghostrider.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/gorge.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/grandtetons.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/redDoor.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/sampleRed.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/shops.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/swans.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/twopeople.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/waterfall.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,66 +52,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ColorRepresentations.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/ColorRepresentations.py">
+      <file leaf-file-name="milestone1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Activity8_Computer Vision/milestone1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransformingImages.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/TransformingImages.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="milestone3Starter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/milestone3Starter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="80" lean-forward="false" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="milestone3.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/milestone3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="identifyingWords.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HW3/identifyingWords.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Affine Warping.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/Affine Warping.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -143,6 +126,7 @@
         <option value="$PROJECT_DIR$/Activity7_BasicManipulations/Affine Warping.py" />
         <option value="$PROJECT_DIR$/Activity7_BasicManipulations/milestone3.py" />
         <option value="$PROJECT_DIR$/HW3/identifyingWords.py" />
+        <option value="$PROJECT_DIR$/Activity8_Computer Vision/milestone1.py" />
       </list>
     </option>
   </component>
@@ -196,7 +180,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HW3" />
+              <option name="myItemId" value="Activity8_Computer Vision" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AI-Robotics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AI-Robotics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity7_BasicManipulations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -211,11 +209,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Activity8_Computer Vision" />
+      <recent name="$PROJECT_DIR$/activity7_BasicManipulations" />
       <recent name="$PROJECT_DIR$/HW2" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/activity7_BasicManipulations" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/HW2" />
     </key>
   </component>
@@ -231,26 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.milestone3">
-    <configuration default="false" name="NumpyBasics" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Activity7_BasicManipulations" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RobotBei" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Activity7_BasicManipulations/NumpyBasics.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.identifyingWords">
     <configuration default="false" name="ColorRepresentations" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -327,6 +307,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="identifyingWords" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HW3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RobotBei" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW3/identifyingWords.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -396,19 +395,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.NumpyBasics" />
-      <item index="1" class="java.lang.String" itemvalue="Python.ColorRepresentations" />
-      <item index="2" class="java.lang.String" itemvalue="Python.TransformingImages" />
-      <item index="3" class="java.lang.String" itemvalue="Python.milestone3" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Affine Warping" />
+      <item index="0" class="java.lang.String" itemvalue="Python.ColorRepresentations" />
+      <item index="1" class="java.lang.String" itemvalue="Python.TransformingImages" />
+      <item index="2" class="java.lang.String" itemvalue="Python.milestone3" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Affine Warping" />
+      <item index="4" class="java.lang.String" itemvalue="Python.identifyingWords" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.milestone3" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Affine Warping" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TransformingImages" />
-        <item index="3" class="java.lang.String" itemvalue="Python.ColorRepresentations" />
-        <item index="4" class="java.lang.String" itemvalue="Python.NumpyBasics" />
+        <item index="0" class="java.lang.String" itemvalue="Python.identifyingWords" />
+        <item index="1" class="java.lang.String" itemvalue="Python.milestone3" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Affine Warping" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TransformingImages" />
+        <item index="4" class="java.lang.String" itemvalue="Python.ColorRepresentations" />
       </list>
     </recent_temporary>
   </component>
@@ -510,7 +509,21 @@
       <option name="project" value="LOCAL" />
       <updated>1521580801264</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="task 2">
+      <created>1521581404559</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1521581404559</updated>
+    </task>
+    <task id="LOCAL-00014" summary="activity8">
+      <created>1521751105144</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1521751105144</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -521,7 +534,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -569,7 +582,9 @@
     <MESSAGE value="color representation" />
     <MESSAGE value="transformation image" />
     <MESSAGE value="milestone3" />
-    <option name="LAST_COMMIT_MESSAGE" value="milestone3" />
+    <MESSAGE value="task 2" />
+    <MESSAGE value="activity8" />
+    <option name="LAST_COMMIT_MESSAGE" value="activity8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -578,8 +593,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/goat.py" />
-    <entry file="file://$PROJECT_DIR$/largeMotor.py" />
     <entry file="file://$PROJECT_DIR$/waveFlag.py" />
     <entry file="file://$PROJECT_DIR$/motor.py" />
     <entry file="file://$PROJECT_DIR$/moveTurn.py" />
@@ -851,21 +864,27 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/ColorRepresentations.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/TransformingImages.py">
+    <entry file="file://$PROJECT_DIR$/HW3/identifyingWords.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/milestone3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -873,6 +892,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="20" column="80" lean-forward="false" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/TransformingImages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/ColorRepresentations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -887,18 +924,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/milestone3.py">
+    <entry file="file://$PROJECT_DIR$/Activity8_Computer Vision/milestone1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW3/identifyingWords.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
