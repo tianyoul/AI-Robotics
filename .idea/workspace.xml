@@ -2,45 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00759fea-ef39-4074-90ab-37bd7f553605" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Blowhole013.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Blowhole021.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Coins1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Coins2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/DollarCoin.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/letterP.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/letters1.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/letters2.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/lettersWH.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Letters/number5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0005.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0012.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0029.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0063.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0067.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Pioneer0093.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Puzzle1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/Puzzle2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/SnowLeo1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/SnowLeo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/SnowLeo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/SnowLeo4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/beachBahamas.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/chicago.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/fallWoods.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/frame0017.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/frame0019.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/frankenstein.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/garden.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/ghostrider.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/gorge.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/grandtetons.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/redDoor.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/sampleRed.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/shops.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/swans.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/twopeople.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/TestImages/waterfall.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/milestone2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Activity8_Computer Vision/milestone1.py" afterPath="$PROJECT_DIR$/Activity8_Computer Vision/milestone1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,12 +16,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="milestone1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="milestone1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Activity8_Computer Vision/milestone1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="18" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="milestone2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Activity8_Computer Vision/milestone2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="87" column="25" lean-forward="true" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,6 +103,7 @@
         <option value="$PROJECT_DIR$/Activity7_BasicManipulations/milestone3.py" />
         <option value="$PROJECT_DIR$/HW3/identifyingWords.py" />
         <option value="$PROJECT_DIR$/Activity8_Computer Vision/milestone1.py" />
+        <option value="$PROJECT_DIR$/Activity8_Computer Vision/milestone2.py" />
       </list>
     </option>
   </component>
@@ -230,45 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.identifyingWords">
-    <configuration default="false" name="ColorRepresentations" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Activity7_BasicManipulations" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RobotBei" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Activity7_BasicManipulations/ColorRepresentations.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TransformingImages" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Activity7_BasicManipulations" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RobotBei" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Activity7_BasicManipulations/TransformingImages.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.milestone2">
     <configuration default="false" name="milestone3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -321,6 +260,44 @@
       <module name="RobotBei" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW3/identifyingWords.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="milestone1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Activity8_Computer Vision" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RobotBei" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Activity8_Computer Vision/milestone1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="milestone2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Activity8_Computer Vision" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RobotBei" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Activity8_Computer Vision/milestone2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -395,19 +372,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.ColorRepresentations" />
-      <item index="1" class="java.lang.String" itemvalue="Python.TransformingImages" />
-      <item index="2" class="java.lang.String" itemvalue="Python.milestone3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Affine Warping" />
-      <item index="4" class="java.lang.String" itemvalue="Python.identifyingWords" />
+      <item index="0" class="java.lang.String" itemvalue="Python.milestone3" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Affine Warping" />
+      <item index="2" class="java.lang.String" itemvalue="Python.identifyingWords" />
+      <item index="3" class="java.lang.String" itemvalue="Python.milestone1" />
+      <item index="4" class="java.lang.String" itemvalue="Python.milestone2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.identifyingWords" />
-        <item index="1" class="java.lang.String" itemvalue="Python.milestone3" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Affine Warping" />
-        <item index="3" class="java.lang.String" itemvalue="Python.TransformingImages" />
-        <item index="4" class="java.lang.String" itemvalue="Python.ColorRepresentations" />
+        <item index="0" class="java.lang.String" itemvalue="Python.milestone2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.milestone1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.identifyingWords" />
+        <item index="3" class="java.lang.String" itemvalue="Python.milestone3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Affine Warping" />
       </list>
     </recent_temporary>
   </component>
@@ -523,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521751105144</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added test images">
+      <created>1521751211389</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1521751211389</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -533,7 +517,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1701389" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -584,7 +568,8 @@
     <MESSAGE value="milestone3" />
     <MESSAGE value="task 2" />
     <MESSAGE value="activity8" />
-    <option name="LAST_COMMIT_MESSAGE" value="activity8" />
+    <MESSAGE value="added test images" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -593,8 +578,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/waveFlag.py" />
-    <entry file="file://$PROJECT_DIR$/motor.py" />
     <entry file="file://$PROJECT_DIR$/moveTurn.py" />
     <entry file="file://$PROJECT_DIR$/Activity1/waveFlag.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -926,9 +909,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Activity8_Computer Vision/milestone1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activity7_BasicManipulations/milestone5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Activity8_Computer Vision/milestone2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="87" column="25" lean-forward="true" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
