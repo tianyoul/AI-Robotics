@@ -100,4 +100,6 @@ ENV/
 # mypy
 .mypy_cache/
 
-workspace.xml
+.idea/workspace.xml
+.idea/misc.xml
+.idea/RobotBei.iml
