@@ -33,16 +33,12 @@ def BFSRoute(graph, startVert, goalVert):
                 n = n[0]
             if n not in visited:
                 visited.add(n)
-                pred[n] = nextVert        
+                pred[n] = nextVert
                 if n != goalVert:
                     q.insert(n)
                 else:
                     return reconstructPath(startVert, goalVert, pred)
     return "NO PATH"
-
-
-
-
 
 
 # ---------------------------------------------------------------
@@ -51,7 +47,7 @@ def DFSRoute(graph, startVert, goalVert):
     looking for a path from some start vertex to some goal vertex
     It uses a stack to store the indices of vertices that it still
     needs to examine."""
-    
+
     if startVert == goalVert:
         return []
     s = Stack()
@@ -68,13 +64,54 @@ def DFSRoute(graph, startVert, goalVert):
                 n = n[0]
             if n not in visited:
                 visited.add(n)
-                pred[n] = nextVert        
+                pred[n] = nextVert
                 if n != goalVert:
                     s.push(n)
                 else:
                     return reconstructPath(startVert, goalVert, pred)
     return "NO PATH"
 
+
+# ---------------------------------------------------------------
+def UCSRoute(graph, startVert, goalVert):
+    nodesRemoved = 0
+    maxSize = 0
+    if startVert == goalVert:
+        return []
+
+    minHeap = PriorityQueue()
+    minHeap.insert(0, startVert)
+    pred_cost = {}
+
+    visited = set()
+    pred = {}
+    while not minHeap.isEmpty():
+        if minHeap.size > maxSize:
+            maxSize = minHeap.size
+        nextVert = minHeap.firstElement()  # nextVert = [cost, vert]
+        minHeap.delete()
+        nodesRemoved = nodesRemoved + 1
+        # print("--------------")
+        # print("Popping", nextVert)
+        if nextVert[1] in visited:
+            continue
+        else:
+            visited.add(nextVert[1])
+            if (nextVert[0], nextVert[1]) in pred_cost.keys():
+                pred[nextVert[1]] = pred_cost[(nextVert[0], nextVert[1])]
+            else:
+                pred[nextVert[1]] = None
+            if goalVert == nextVert[1]:
+                return reconstructPath(startVert, goalVert, pred)
+        neighbors = graph.getNeighbors(nextVert[1])
+        for n in neighbors:
+            neighNode = n[0]
+            edgeCost = n[1]
+            if neighNode not in visited:
+                minHeap.insert(edgeCost + nextVert[0], neighNode)
+                pred_cost[(edgeCost + nextVert[0], neighNode)] = nextVert[1]
+
+    return "NO PATH"
 
 
 # ---------------------------------------------------------------
@@ -104,19 +141,19 @@ def dijkstras(graph, startVert, goalVert):
         (nextCTG, nextVert) = q.firstElement()
         q.delete()
         visited.add(nextVert)
-        print("--------------")
-        print("Popping", nextVert, nextCTG)
+        # print("--------------")
+        # print("Popping", nextVert, nextCTG)
         neighbors = graph.getNeighbors(nextVert)
         for n in neighbors:
             neighNode = n[0]
             edgeCost = n[1]
-            if neighNode not in visited and\
-               cost[neighNode] > nextCTG + edgeCost:
+            if neighNode not in visited and \
+                            cost[neighNode] > nextCTG + edgeCost:
                 print("Node", neighNode, "From", nextVert)
                 print("New cost =", nextCTG + edgeCost)
                 cost[neighNode] = nextCTG + edgeCost
                 pred[neighNode] = nextVert
-                q.update( cost[neighNode], neighNode )
+                q.update(cost[neighNode], neighNode)
     for vert in graph.getVertices():
         bestPath = reconstructPath(goalVert, vert, pred)
         bestPath.reverse()
@@ -124,7 +161,55 @@ def dijkstras(graph, startVert, goalVert):
     finalPath = reconstructPath(goalVert, startVert, pred)
     finalPath.reverse()
     return finalPath
-    
+
+
+# ---------------------------------------------------------------
+def AStarRoute(graph, startVert, goalVert):
+    nodesRemoved = 0
+    maxSize = 0
+    if startVert == goalVert:
+        return []
+
+    minHeap = PriorityQueue()
+    minHeap.insert(0, startVert)
+    pred_cost = {}
+
+    visited = set()
+    pred = {}
+    while not minHeap.isEmpty():
+        if minHeap.size > maxSize:
+            maxSize = minHeap.size
+        nextVert = minHeap.firstElement()  # nextVert = [cost, vert]
+        # print("--------------")
+        # print("Popping", nextVert)
+        minHeap.delete()
+        nodesRemoved = nodesRemoved + 1
+        if nextVert[1] in visited:
+            continue
+        else:
+            visited.add(nextVert[1])
+            if (nextVert[0], nextVert[1]) in pred_cost.keys():
+                pred[nextVert[1]] = pred_cost[(nextVert[0], nextVert[1])]
+            else:
+                pred[nextVert[1]] = None
+            if goalVert == nextVert[1]:
+                return reconstructPath(startVert, goalVert, pred)
+        neighbors = graph.getNeighbors(nextVert[1])
+        # print('Adding neighbors to the queue: ')
+        for n in neighbors:
+            neighNode = n[0]
+            edgeCost = n[1]
+            if neighNode not in visited:
+                Gcost = edgeCost + nextVert[0]
+                Hcost = graph.heuristicDist(neighNode, goalVert)
+                if startVert != nextVert[1]:
+                    Gcost = Gcost - graph.heuristicDist(nextVert[1], goalVert)
+                Fcost = Gcost + Hcost
+                # print('Node ' + str(neighNode) + ' from ' + str(nextVert[1]))
+                # print('G cost = ' + str(Gcost) + ' H cost = ' + str(Hcost) + ' F cost =  ' + str(Fcost))
+                minHeap.insert(Fcost, neighNode)
+                pred_cost[(Fcost, neighNode)] = nextVert[1]
+    return "NO PATH"
 
 
 # ---------------------------------------------------------------

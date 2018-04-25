@@ -159,7 +159,7 @@ class GridGraph(Graphs.WeightedListGraph):
                 else:
                     valStr = str(val).rjust(3)
                 rowStr += valStr + " "
-            print(rowStr)
+            # print(rowStr)
 
 
     def printGrid(self):
@@ -171,7 +171,7 @@ class GridGraph(Graphs.WeightedListGraph):
                 val = self.grid[row, col]
                 valStr = str(val).rjust(3)
                 rowStr += valStr + " "
-            print(rowStr)
+            # print(rowStr)
 
     def copy(self):
         """Makes a new copy of the GridGraph object."""
