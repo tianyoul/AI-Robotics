@@ -17,7 +17,7 @@ import time
 
 
 class DStarAlgorithm:
-    
+
     def __init__(self, graph, startVert, goalVert):
         """Takes in a graph, start vertex and goal vertex, and sets up the D* Lite
         search, initializing all the data structures and the priority queue."""
@@ -25,22 +25,49 @@ class DStarAlgorithm:
         self.startVert = startVert
         self.goalVert = goalVert
         self.maxVal = 1000
+        self.rhs = {}
+        self.g = {}
         self.initialize()
-        
         
         
     def initialize(self):
         """The Initialize algorithm from the pseudocode."""
-        pass
-        
+        self.U = PriorityQueue()
+        for node in self.graph:
+            self.rhs[node] = self.maxVal
+            self.g[node] = self.maxVal
+        self.rhs[self.startVert] = 0
+        self.U.insert(self.calculateKey(self.startVert), self.startVert) # The priority queue stores the priority first, then the vertex
+
+
     def computeShortestPath(self):
         """The ComputeShortestPath algorithm from the pseudocode."""
-        pass
+        while (not self.U.isEmpty()) and (self.U.firstElement()<self.calculateKey(self.goalVert)) or (self.rhs[self.goalVert]!=self.g[self.goalVert]):
+            u = self.U.delete()
+            if self.g[u] > self.rhs[u]:
+                self.g[u] = self.rhs[u]
+            else:
+                self.g[u] = self.maxVal
+                self.updateVertex(u)
+            successors = self.graph.getNeighbors(u)
+            for s in successors:
+                self.updateVertex(s)
+
 
                 
     def updateVertex(self, vert):
         """The UpdateVertex algorithm from the pseudocode."""
-        pass
+        if vert != self.startVert:
+            minVal = self.maxVal
+            for s in self.graph.getNeighbors(vert):
+                if self.g[s]+ s[1] < minVal:
+                    minVal = self.g[s] + s[1]
+            self.rhs[vert] = minVal
+        if vert in self.U:
+            self.U.removeValue(vert)
+        if self.g[vert] != self.rhs[vert]:
+            self.U.insert(self.calculateKey(vert), vert)
+
 
             
     def minNeighCost(self, vert):
@@ -60,9 +87,10 @@ class DStarAlgorithm:
                
         
     def calculateKey(self, vert):
-        """The CalculateKey algorithm from the pseudocode."""
-        pass
-
+        """Calculates the current priority for a given vertex"""
+        minG = min(self.g[vert], self.rhs[vert])
+        heurCost = self.graph.heuristicDist(vert, self.goalVert)
+        return [minG + heurCost, minG]
 
     def compareKeys(self, key1, key2):
         """Takes in two keys, each of which is a list containing f cost
@@ -70,9 +98,8 @@ class DStarAlgorithm:
         it chooses the lower g cost."""
         [f1, g1] = key1
         [f2, g2] = key2
-        return (f1 < f2) or ( (f1 == f2) and (g1 < g2) )
-    
-    
+        return (f1 < f2) or ((f1 == f2) and (g1 < g2))
+
     def correctInformation(self, newInfo):
         """Takes in a dictionary whose keys are (r, c) tuples, and the value
         is the newly corrected cell weight. Updates the graph, and then updates
@@ -82,29 +109,24 @@ class DStarAlgorithm:
         self.graph.graphFromGrid()
         for (r, c) in newInfo:
             nodeNum = r * self.graph.getWidth() + c
-            #print("(", r, c, ")", nodeNum)
+            # print("(", r, c, ")", nodeNum)
             self.updateVertex(nodeNum)
             neighs = self.graph.getNeighbors(nodeNum)
             for (nextNeigh, wgt) in neighs:
                 self.updateVertex(nextNeigh)
-        
-    
-    
-  
 
     def reconstructPath(self):
         """ Given the start vertex and goal vertex, and the table of
         predecessors found during the search, this will reconstruct the path
         from start to goal"""
 
-        path = [self.goalVert]   
+        path = [self.goalVert]
         currVert = self.goalVert
         while currVert != self.startVert:
             currVert = self._pickMinNeighbor(currVert)
             path.insert(0, currVert)
         return path
 
-    
     def _pickMinNeighbor(self, vert):
         """A helper to path-reconstruction that finds the neighbor of a vertex
         that has the minimum g cost."""
@@ -116,8 +138,6 @@ class DStarAlgorithm:
                 minVal = self.g[neigh]
                 minNeigh = neigh
         return minNeigh
-                
-
 
 # ---------------------------------------------------------------
 def DStarRoute(graph, startVert, goalVert):
@@ -131,10 +151,7 @@ def DStarRoute(graph, startVert, goalVert):
     route = dStarRunner.computeShortestPath()
     return route
 
-
-
-
-def DStarGlobal(graph, startVert, goalVert, percWrong = 20):
+def DStarGlobal(graph, startVert, goalVert, percWrong=20):
     """This algorithm search a graph using D* Lite for
     a path from some start to some goal. It simulates incorrect
     information about the world by modifying percWrong percent
@@ -151,15 +168,15 @@ def DStarGlobal(graph, startVert, goalVert, percWrong = 20):
     t1 = time.time()
     route1 = dStarRunner.computeShortestPath()
     t2 = time.time()
-    print ("First route found is:")
-    print (route1)
-    print ("Time elapsed:", t2-t1)
+    print("First route found is:")
+    print(route1)
+    print("Time elapsed:", t2 - t1)
     graph.printWithRoute(route1)
 
     print("--------")
     print("CORRECT MAP:")
     graph.printGrid()
-    print ("Correcting information...")
+    print("Correcting information...")
     dStarRunner.correctInformation(correctInfo)
 
     t1 = time.time()
@@ -167,17 +184,13 @@ def DStarGlobal(graph, startVert, goalVert, percWrong = 20):
     t2 = time.time()
     if route1 == route2:
         print("SAME ROUTE")
-    print ("Fixed route found is:")
-    print (route2)
-    print ("Time elapsed:", t2-t1)
+    print("Fixed route found is:")
+    print(route2)
+    print("Time elapsed:", t2 - t1)
     graph.printWithRoute(route2)
     return route2
-    
-    
-    
 
-
-def DStarLocal(graph, startVert, goalVert, percWrong = 20):
+def DStarLocal(graph, startVert, goalVert, percWrong=20):
     """This algorithm search a graph using D* Lite for
     a path from some start to some goal. It simulates incorrect
     information about the world by modifying percWrong percent
@@ -191,13 +204,12 @@ def DStarLocal(graph, startVert, goalVert, percWrong = 20):
     print("CORRUPTED GRAPH:")
     dStarRunner = DStarAlgorithm(incorrectGraph, startVert, goalVert)
     print("First pass...")
-    RouteFinding.testAndRun(dStarRunner)
     t1 = time.time()
     route1 = dStarRunner.computeShortestPath()
     t2 = time.time()
-    print ("First route found is:")
-    print (route1)
-    print ("Time elapsed:", t2-t1)
+    print("First route found is:")
+    print(route1)
+    print("Time elapsed:", t2 - t1)
     incorrectGraph.printWithRoute(route1)
     mapWid = graph.getWidth()
     mapHgt = graph.getHeight()
@@ -206,18 +218,16 @@ def DStarLocal(graph, startVert, goalVert, percWrong = 20):
         badNeighbors = findIncorrectNeighbors(correctInfo, r, c, mapWid, mapHgt)
         if len(badNeighbors) > 0:
             print("Incorrect neighbors:", badNeighbors)
-            print ("Correcting information...")
+            print("Correcting information...")
             dStarRunner.correctInformation(badNeighbors)
             t1 = time.time()
             nextRoute = dStarRunner.computeShortestPath()
             t2 = time.time()
-            print ("Fixed route found is:")
-            print (nextRoute)
-            print ("Time elapsed:", t2-t1)
+            print("Fixed route found is:")
+            print(nextRoute)
+            print("Time elapsed:", t2 - t1)
             graph.printWithRoute(nextRoute)
     return nextRoute
-
-
 
 def findIncorrectNeighbors(correctInfo, row, col, wid, hgt):
     """Takes in the dictionary of correct information, along
@@ -227,25 +237,23 @@ def findIncorrectNeighbors(correctInfo, row, col, wid, hgt):
     information, are added to the dictionary. That dictionary is returned."""
     bads = {}
     for r in [row - 1, row, row + 1]:
-        for c in [col -1, col, col + 1]:
+        for c in [col - 1, col, col + 1]:
             if (r >= 0) and (r < wid) and (c >= 0) and (c < hgt):
                 if (r, c) in correctInfo:
                     bads[r, c] = correctInfo[r, c]
                     del correctInfo[r, c]
     return bads
 
-    
-    
-def corruptGraph(oldGraph, percWrong):    
+def corruptGraph(oldGraph, percWrong):
     """Takes in an old grid graph and the percentage that should
-    be modified, and returns a dictionary containing the correct 
+    be modified, and returns a dictionary containing the correct
     values, so they can be fixed later, and a new graph with
     modified values."""
     graph = oldGraph.copy()
     graphSize = graph.getSize()
     minC = oldGraph.getMinCost()
     maxC = oldGraph.getMaxCost()
-    #print("minC =", minC, "maxC =", maxC)
+    # print("minC =", minC, "maxC =", maxC)
     correctInfo = {}
     for i in range(percWrong * graphSize // 100):
         randNode = random.randrange(graphSize)
@@ -255,6 +263,5 @@ def corruptGraph(oldGraph, percWrong):
         graph.setCellValue(randRow, randCol, randVal)
     graph.graphFromGrid()
     return correctInfo, graph
-        
-        
-        
+
+
