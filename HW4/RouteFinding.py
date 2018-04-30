@@ -54,7 +54,7 @@ def chooseDStarVariant():
     or iteratively "as stumbled upon" corrected knowledge."""
     print("Which knowledge option do you choose for D* Lite?")
     print("        a: No incorrect knowledge")
-    print("        b: Incorrect knowledge, globally corrected")
+    print("        b: k")
     print("        c: Incorrect knowledge, corrected as found")
     optChoice = getUserChoice("[a, b, c]",
                               ['a', 'b', 'c'])

@@ -14,6 +14,7 @@ and to respond with methods that implement the key features of the algorithm."""
 import random
 from FoxQueue import Queue, PriorityQueue
 import time
+import math
 
 
 class DStarAlgorithm:
@@ -24,26 +25,32 @@ class DStarAlgorithm:
         self.graph = graph
         self.startVert = startVert
         self.goalVert = goalVert
-        self.maxVal = 1000
-        self.rhs = {}
-        self.g = {}
+        self.maxVal = math.inf
         self.initialize()
         
         
     def initialize(self):
         """The Initialize algorithm from the pseudocode."""
         self.U = PriorityQueue()
-        for node in self.graph:
+        self.nodesRemoved = 0
+        self.maxSize = 0
+        self.rhs = {}
+        self.g = {}
+        for node in self.graph.getVertices():
             self.rhs[node] = self.maxVal
             self.g[node] = self.maxVal
         self.rhs[self.startVert] = 0
         self.U.insert(self.calculateKey(self.startVert), self.startVert) # The priority queue stores the priority first, then the vertex
 
-
     def computeShortestPath(self):
         """The ComputeShortestPath algorithm from the pseudocode."""
-        while (not self.U.isEmpty()) and (self.U.firstElement()<self.calculateKey(self.goalVert)) or (self.rhs[self.goalVert]!=self.g[self.goalVert]):
-            u = self.U.delete()
+
+        while (not self.U.isEmpty()) and (self.compareKeys(self.U.firstElement()[0],self.calculateKey(self.goalVert))) or (self.rhs[self.goalVert]!=self.g[self.goalVert]):
+            if self.U.size > self.maxSize:
+                self.maxSize = self.U.size
+            u = self.U.firstElement()[1]
+            self.U.delete()
+            self.nodesRemoved = self.nodesRemoved + 1
             if self.g[u] > self.rhs[u]:
                 self.g[u] = self.rhs[u]
             else:
@@ -51,8 +58,10 @@ class DStarAlgorithm:
                 self.updateVertex(u)
             successors = self.graph.getNeighbors(u)
             for s in successors:
-                self.updateVertex(s)
-
+                self.updateVertex(s[0])
+        if self.U.isEmpty():
+            return [] # So that it doesn't crash
+        return self.reconstructPath()
 
                 
     def updateVertex(self, vert):
@@ -60,10 +69,10 @@ class DStarAlgorithm:
         if vert != self.startVert:
             minVal = self.maxVal
             for s in self.graph.getNeighbors(vert):
-                if self.g[s]+ s[1] < minVal:
-                    minVal = self.g[s] + s[1]
+                if self.g[s[0]]+ s[1] < minVal:
+                    minVal = self.g[s[0]] + s[1]
             self.rhs[vert] = minVal
-        if vert in self.U:
+        if self.U.contains(vert):
             self.U.removeValue(vert)
         if self.g[vert] != self.rhs[vert]:
             self.U.insert(self.calculateKey(vert), vert)
@@ -119,20 +128,21 @@ class DStarAlgorithm:
         """ Given the start vertex and goal vertex, and the table of
         predecessors found during the search, this will reconstruct the path
         from start to goal"""
-
         path = [self.goalVert]
         currVert = self.goalVert
         while currVert != self.startVert:
             currVert = self._pickMinNeighbor(currVert)
             path.insert(0, currVert)
+        print(self.nodesRemoved)
+        print(self.maxSize)
         return path
 
     def _pickMinNeighbor(self, vert):
         """A helper to path-reconstruction that finds the neighbor of a vertex
         that has the minimum g cost."""
         neighs = self.graph.getNeighbors(vert)
-        minVal = self.maxVal
         minNeigh = None
+        minVal = self.maxVal
         for [neigh, cost] in neighs:
             if self.g[neigh] < minVal:
                 minVal = self.g[neigh]
