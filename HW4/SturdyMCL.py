@@ -17,9 +17,9 @@ bei = SturdyBot('Bei', config)
 # quick simulation to test the code
 buttons = ev3.Button()
 max_v = 43.835
-velocity = 0.1  # Negative for backward
-actualLoc = 1.0
-expectedLoc = 1.0
+velocity = -0.2  # Negative for backward
+actualLoc = 179.0
+expectedLoc = 179.0
 twoNumsStr = "{0:7.3f}  {1:7.3f}"
 print("------------ Initial location, expected and actual:", twoNumsStr.format(expectedLoc, actualLoc))
 while not buttons.any() and expectedLoc < 180:
@@ -28,7 +28,7 @@ while not buttons.any() and expectedLoc < 180:
     if distMoved > 0:
         bei.forward(velocity, distMoved/(velocity * max_v))
     else:
-        bei.backward(-velocity, distMoved/(-velocity * max_v))
+        bei.backward(-velocity, distMoved/(velocity * max_v))
 
     expectedLoc += velocity * max_v
     actualLoc = actualLoc + distMoved
